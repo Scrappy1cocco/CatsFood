@@ -1,0 +1,112 @@
+@import "mixins";
+@import "vars";
+@import "null";
+@import "fonts";
+
+
+.bomb {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    @include rotate(45);
+}
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	&.loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+.main {
+	background: url(../img/Pattern.jpg);
+	width: 100vw;
+	min-height: 100vh;
+
+	&__title {
+		font-size: 36px;
+		color: #fff;
+		text-align: center;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 14px;
+		color: #000;
+		font-family: "Trebuchet MS";
+	}
+}
+
+.main__content {
+	padding-top: 55px;
+}
+
+
+
+.list-item {
+	padding-top: 20px;
+	padding-left: 45px;
+	width: 320px;
+	height: 480px;
+	background-color: #fff;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__fairy-text {
+		color: #666;
+		font-size: 16px;
+	}
+
+	&__title {
+		padding-top: 15px;
+		font-size: 48px;
+		font-weight: bold;
+		text-align: left;
+	}
+
+	&__with {
+		padding-top: 7px;
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+	&__data {
+		display: flex;
+		flex-direction: column;
+		padding-top: 17px;
+		color: #666;
+	}
+
+	&__gift {
+		padding-top: 3px;
+	}
+
+	&__info {
+
+	}
+}
