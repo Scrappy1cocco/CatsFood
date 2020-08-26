@@ -66,6 +66,9 @@
 
 
 .list-item {
+	position: relative;
+	transform: skewx(-20deg);
+	overflow: hidden;
 	padding-top: 20px;
 	padding-left: 45px;
 	width: 320px;
@@ -75,6 +78,8 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
+		transform: skewX(20deg);
+		
 	}
 
 	&__fairy-text {

@@ -152,6 +152,11 @@ h6 {
 }
 
 .list-item {
+  position: relative;
+  -webkit-transform: skewx(-20deg);
+      -ms-transform: skewx(-20deg);
+          transform: skewx(-20deg);
+  overflow: hidden;
   padding-top: 20px;
   padding-left: 45px;
   width: 320px;
@@ -167,6 +172,9 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transform: skewX(20deg);
+      -ms-transform: skewX(20deg);
+          transform: skewX(20deg);
 }
 
 .list-item__fairy-text {
