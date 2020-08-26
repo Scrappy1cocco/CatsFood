@@ -102,15 +102,6 @@ h6 {
   font-style: normal;
 }
 
-.bomb {
-  width: 50px;
-  height: 50px;
-  background-color: green;
-  -ms-transform: rotate(45);
-  -webkit-transform: rotate(45);
-  transform: rotate(45);
-}
-
 .container {
   max-width: 1170px;
   margin: 0 auto;
@@ -147,21 +138,12 @@ h6 {
   font-family: "Trebuchet MS";
 }
 
-.main__content {
-  padding-top: 55px;
+.main__item-wrapper {
+  position: relative;
 }
 
-.list-item {
-  position: relative;
-  -webkit-transform: skewx(-20deg);
-      -ms-transform: skewx(-20deg);
-          transform: skewx(-20deg);
-  overflow: hidden;
-  padding-top: 20px;
-  padding-left: 45px;
-  width: 320px;
-  height: 480px;
-  background-color: #fff;
+.main__content {
+  padding-top: 55px;
 }
 
 .list-item__content {
@@ -172,14 +154,50 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transform: skewX(20deg);
-      -ms-transform: skewX(20deg);
-          transform: skewX(20deg);
+}
+
+.list-item__content-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 44px;
+}
+
+.list-item__corner {
+  position: relative;
+  width: 43px;
+  background: -o-linear-gradient(135deg, #fff, #fff 28px, #1698d9 0, #1698d9 32px, transparent 0);
+  background: linear-gradient(-45deg, #fff, #fff 28px, #1698d9 0, #1698d9 32px, transparent 0);
+}
+
+.list-item__title {
+  padding-left: 45px;
+}
+
+.list-item__with {
+  padding-left: 47px;
 }
 
 .list-item__fairy-text {
+  display: block;
+  padding-top: 22px;
+  padding-right: 61px;
+  padding-left: 8px;
   color: #666;
   font-size: 16px;
+  background-color: #fff;
+  border-top: 4px solid #1698d9;
+  border-right: 4px solid #1698d9;
+}
+
+.list-item__content-main {
+  position: relative;
+  height: 436px;
+  background-color: #fff;
+  border: 4px solid #1698d9;
+  border-top: none;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .list-item__title {
@@ -204,11 +222,24 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 17px;
+  padding-left: 47px;
   color: #666;
 }
 
 .list-item__gift {
   padding-top: 3px;
+}
+
+.list-item__img {
+  position: absolute;
+  left: -30px;
+  bottom: -97px;
+  width: 370px;
+  z-index: 0;
+}
+
+.list-item__info {
+  color: #fff;
 }
 
 @media (max-width: 1182px) {
