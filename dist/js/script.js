@@ -16,4 +16,8 @@ testWebP(function (support) {
   } else {
     document.querySelector('body').classList.add('no-webp');
   }
-});
+}); // var items = document.getElementsByClassName('list-item');
+// var image = document.getElementById('pict');
+// for (var i = 0; i < items.length; i++) {
+//     items[i].onmouseover = image.src='dddd';
+// }

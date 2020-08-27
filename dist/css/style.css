@@ -115,9 +115,18 @@ h6 {
 }
 
 .main {
-  background: url(../img/Pattern.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
   min-height: 100vh;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), color-stop(rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.7))), url(../img/Pattern.jpg);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.7)), url(../img/Pattern.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.7)), url(../img/Pattern.jpg);
+  background-position: center;
 }
 
 .main__title {
@@ -142,10 +151,6 @@ h6 {
   position: relative;
 }
 
-.main__content {
-  padding-top: 55px;
-}
-
 .list-item__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,6 +159,7 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 
 .list-item__content-header {
@@ -230,6 +236,37 @@ h6 {
   padding-top: 3px;
 }
 
+.list-item__weight {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  text-align: center;
+  bottom: 11px;
+  right: 11px;
+  width: 81px;
+  height: 81px;
+  border-radius: 50%;
+  background-color: #1698d9;
+  z-index: 2;
+}
+
+.list-item__weight-value {
+  font-size: 42px;
+}
+
+.list-item__weight-kg {
+  font-size: 21px;
+}
+
 .list-item__img {
   position: absolute;
   left: -30px;
@@ -239,7 +276,16 @@ h6 {
 }
 
 .list-item__info {
+  padding-top: 15px;
+  text-align: center;
   color: #fff;
+}
+
+.list-item__buy {
+  display: inline-block;
+  color: #1698d9;
+  border-bottom: 1px dashed #1698d9;
+  cursor: pointer;
 }
 
 @media (max-width: 1182px) {
@@ -261,4 +307,8 @@ h6 {
   }
 }
 
-.webp .main { background: url(../img/Pattern.webp); }
+.webp .main { background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), color-stop(rgba(0, 0, 0, 0.01)), to(rgba(0, 0, 0, 0.7))), url(../img/Pattern.webp); }
+
+.webp .main { background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.7)), url(../img/Pattern.webp); }
+
+.webp .main { background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.7)), url(../img/Pattern.webp); }
